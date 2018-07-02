@@ -61,10 +61,7 @@ public class RestDmUserService {
 
     @RequestMapping(value = "/createuser")
     @Transactional
-    public Integer createDmUser(@RequestParam("wxUserId") String wxUserId, @RequestParam("id") String id) throws Exception {
-        DmUser dmUser = new DmUser();
-        dmUser.setId(Long.parseLong(id));
-        dmUser.setWxUserId(wxUserId);
+    public Integer createDmUser(@RequestBody DmUser dmUser) throws Exception {
         dmUser.setCreatedTime(new Date());
         return dmUserMapper.insertDmUser(dmUser);
     }
