@@ -21,6 +21,7 @@ spring:
     timeout: 3000
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
+moduleName: user_provider 
 
 ---
 spring:
