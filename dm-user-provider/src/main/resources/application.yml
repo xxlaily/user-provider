@@ -1,4 +1,3 @@
-
 spring:
   application:
     name: dm-user-provider
